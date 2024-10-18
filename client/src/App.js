@@ -3,12 +3,12 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 
 
-import Post1 from "./Posts/Post1.jsx";
-import Post2 from "./Posts/Post2.jsx";
-import Post3 from "./Posts/Post3.jsx";
-import Post4 from "./Posts/Post4.jsx";
-import Post5 from "./Posts/Post5.jsx";
-import Post6 from "./Posts/Post6.jsx";
+import Post1 from './components/Posts/Post1.jsx'
+import Post2 from "./components/Posts/Post2.jsx";
+import Post3 from "./components/Posts/Post3.jsx";
+import Post4 from "./components/Posts/Post4.jsx";
+import Post5 from "./components/Posts/Post5.jsx";
+import Post6 from "./components/Posts/Post6.jsx";
 import PostsLayout from "./components/layouts/PostsLayout.jsx";
 import PostsIndex from "./PostsIndex.jsx";
 import HomePage from "./pages/HomePage.jsx";
