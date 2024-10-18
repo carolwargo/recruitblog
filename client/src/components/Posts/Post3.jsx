@@ -1,28 +1,28 @@
 import React from 'react';
-import Algo from "../../../assets/images/Algos.jpeg";
+import Algo from "../../assets/images/Algos.jpeg";
 import { FaShare } from "react-icons/fa6";
 import { MdOutlineAddLink } from "react-icons/md";
 
-const Article3 = () => {
-    const articleTitle = "Data: The Foundation of Website Optimization";
-    const articleURL = window.location.href;
-    const articleImage = Algo;
+const post3 = () => {
+    const postTitle = "Data: The Foundation of Website Optimization";
+    const postURL = window.location.href;
+    const postImage = Algo;
 
     const handleShare = () => {
         if (navigator.share) {
             navigator.share({
-                title: articleTitle,
-                text: 'Check out this article on data analytics!',
-                url: articleURL,
+                title: postTitle,
+                text: 'Check out this post on data analytics!',
+                url: postURL,
                 files: [
-                    new File([articleImage], "analytics.jpg", {
+                    new File([postImage], "analytics.jpg", {
                         type: "image/jpeg",
                     })
                 ]
             }).then(() => {
                 console.log('Thanks for sharing!');
             }).catch((error) => {
-                console.error('Something went wrong sharing the article:', error);
+                console.error('Something went wrong sharing the post:', error);
             });
         } else {
             alert('Sharing is not supported on this browser.');
@@ -30,7 +30,7 @@ const Article3 = () => {
     };
 
     const handleCopyLink = () => {
-        navigator.clipboard.writeText(articleURL).then(() => {
+        navigator.clipboard.writeText(postURL).then(() => {
             alert('Link copied to clipboard!');
         }).catch((error) => {
             console.error('Could not copy text:', error);
@@ -38,7 +38,7 @@ const Article3 = () => {
     };
     return (
 
-        <div className='article3' id='article3'>
+        <div className='post3' id='post3'>
             {/**Start with the Data: The Foundation of Website Optimization */}
             <style>
                 {`
@@ -67,9 +67,9 @@ const Article3 = () => {
                 }
                 `}
             </style>
-            <article className="blog-post text-black">
+            <post className="blog-post text-black">
                 <img src={Algo} alt="algo" className='w-100 shadow-lg rounded' />
-                <h2 className="display-4 link-body-emphasis my-4"><b>{articleTitle}</b></h2>
+                <h2 className="display-4 link-body-emphasis my-4"><b>{postTitle}</b></h2>
                 <p className="blog-post-meta">August 8, 2024 by <a href="/blog">author</a></p>
 
                 <p>Collecting data is the essential first step in enhancing your website. Data reveals critical facts like user behavior and coding issues, offering actionable insights that guide the optimization process and improve user experience.</p>
@@ -108,9 +108,9 @@ const Article3 = () => {
                     <button className="copy-link-button btn btn-black shadow px-2 btn-sm mx-1" onClick={handleCopyLink}> copy <MdOutlineAddLink  style={{fontSize:'1rem'}}/></button>
               </div>
               <hr/>
-            </article>
+            </post>
         </div>
     );
 }
 
-export default Article3;
+export default post3;

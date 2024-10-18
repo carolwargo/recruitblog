@@ -1,6 +1,6 @@
 
 import React from "react";
-import Algo from "../../../assets/images/Algos.jpeg";
+import Algo from "../../assets/images/Algos.jpeg";
 import { FaShare } from "react-icons/fa6";
 import { MdOutlineAddLink } from "react-icons/md";
 

@@ -4,7 +4,7 @@ import * as React from 'react';
 import Box from '@mui/joy/Box';
 import Card from '@mui/joy/Card';
 import CardContent from '@mui/joy/CardContent';
-import HRCThumbnail from '../../../assets/images/HRC/HRCThumbnail.png';
+import HRCThumbnail from '../../assets/images/HRC/HRCThumbnail.png';
 import { FaShare } from 'react-icons/fa';
 import { MdOutlineAddLink } from 'react-icons/md';
 
@@ -22,25 +22,26 @@ export default function InstagramPost() {
     setCurrentHRCIndex(index);
   };
 
-  const articleTitle = "HUMAN RIGHTS CAMPAIGN";
-    const articleURL = window.location.href;
-    const articleImage = HRCThumbnail;
+  const postTitle = "HUMAN RIGHTS CAMPAIGN";
+    const postURL = window.location.href;
+    const postImage = HRCThumbnail;
+   
 
     const handleShare = () => {
         if (navigator.share) {
             navigator.share({
-                title: articleTitle,
-                text: 'Check out this article on data analytics!',
-                url: articleURL,
+                title: postTitle,
+                summary: 'Check out this post on data analytics!',
+                url: postURL,
                 files: [
-                    new File([articleImage], "analytics.jpg", {
+                    new File([postImage], "analytics.jpg", {
                         type: "image/jpeg",
                     })
                 ]
             }).then(() => {
                 console.log('Thanks for sharing!');
             }).catch((error) => {
-                console.error('Something went wrong sharing the article:', error);
+                console.error('Something went wrong sharing the post:', error);
             });
         } else {
             alert('Sharing is not supported on this browser.');
@@ -48,7 +49,7 @@ export default function InstagramPost() {
     };
 
     const handleCopyLink = () => {
-        navigator.clipboard.writeText(articleURL).then(() => {
+        navigator.clipboard.writeText(postURL).then(() => {
             alert('Link copied to clipboard!');
         }).catch((error) => {
             console.error('Could not copy text:', error);
@@ -85,18 +86,18 @@ export default function InstagramPost() {
         `}
     </style>
     
-    <article className="blog-post text-black">
+    <post className="blog-post text-black">
       
       <div className='hrc-post container' id="hrc-post">
      <div className="mt-5">
        
        
      <h2 className="display-4 link-body-emphasis text-primary fw-bolder my-3">
-            {articleTitle}</h2>
+            {postTitle}</h2>
         <p className="blog-post-meta">August 8, 2024 by <a href="/blog">author</a></p>
 
         <hr/>
-        <p>THE CONDITIONAL FIGHT FOR LESS THAN 8% OF THE POPULATION, AND THEIR DISTAIN FOR THE REMAINING 92% OF US SUB-HUMANS & OUR SILLY RIGHTS!</p>
+        <p> The Human Rights Campaign (HRC) is the largest LGBTQ advocacy group and political lobbying organization in the United States. The organization focuses on protecting and expanding rights for LGBTQ individuals, including marriage equality, anti-discrimination laws, and HIV/AIDS advocacy."</p>
      
         <blockquote className="blockquote">
             <h4><i>LET'S DEFINE <b>"HUMAN RIGHTS"</b></i> <span style={{fontSize:'14px'}}>'Human rights are fundamental rights and freedoms that belong to every person simply because they are human. These rights are universal, meaning they apply to everyone, regardless of nationality, sex, ethnicity, religion, or any other status. They include a wide range of rights, such as the right to life, liberty, and personal security; freedom of thought, conscience, and religion; and the right to work, education, and an adequate standard of living.'</span></h4>
@@ -163,7 +164,7 @@ export default function InstagramPost() {
                     <button className="copy-link-button btn btn-black shadow px-2 btn-sm mx-1" onClick={handleCopyLink}> copy <MdOutlineAddLink  style={{fontSize:'1rem'}}/></button>
               </div>
               </div>
-    </article>
+    </post>
 </div>
 
 

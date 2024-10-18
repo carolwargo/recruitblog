@@ -1,28 +1,28 @@
 import React from 'react';
-import Algo from "../../../assets/images/Algos.jpeg";
+import Algo from "../../assets/images/Algos.jpeg";
 import { FaShare } from "react-icons/fa6";
 import { MdOutlineAddLink } from "react-icons/md";
 
-const Article4 = () => {
-  const articleTitle = "Understanding Algorithms";
-  const articleURL = window.location.href;
-  const articleImage = Algo;
+const Post4 = () => {
+  const postTitle = "Understanding Algorithms";
+  const postURL = window.location.href;
+  const postImage = Algo;
 
   const handleShare = () => {
       if (navigator.share) {
           navigator.share({
-              title: articleTitle,
-              text: 'Check out this article!',
-              url: articleURL,
+              title: postTitle,
+              text: 'Check out this post!',
+              url: postURL,
               files: [
-                  new File([articleImage], "analytics.jpg", {
+                  new File([postImage], "analytics.jpg", {
                       type: "image/jpeg",
                   })
               ]
           }).then(() => {
               console.log('Thanks for sharing!');
           }).catch((error) => {
-              console.error('Something went wrong sharing the article:', error);
+              console.error('Something went wrong sharing the post:', error);
           });
       } else {
           alert('Sharing is not supported on this browser.');
@@ -30,7 +30,7 @@ const Article4 = () => {
   };
 
   const handleCopyLink = () => {
-      navigator.clipboard.writeText(articleURL).then(() => {
+      navigator.clipboard.writeText(postURL).then(() => {
           alert('Link copied to clipboard!');
       }).catch((error) => {
           console.error('Could not copy text:', error);
@@ -38,7 +38,7 @@ const Article4 = () => {
   };
 
     return (
-        <div className='article4' id='article4'>
+        <div className='post4' id='post4'>
             {/**UNDERSTANDING ALGORITHMS */}
             <style>
                 {`
@@ -68,9 +68,9 @@ const Article4 = () => {
                 `}
             </style>
             
-            <article className="blog-post text-black">
+            <post className="blog-post text-black">
                 <img src={Algo} alt="algorithm" className='w-100 shadow-lg rounded' />
-                <h2 className="display-4 link-body-emphasis my-4"><b>{articleTitle}</b></h2>
+                <h2 className="display-4 link-body-emphasis my-4"><b>{postTitle}</b></h2>
                 <p className="blog-post-meta">July 27, 2024 by <a href="/blog">author</a></p>
 
                 <p>Algorithms are at the heart of computer science. They are a set of instructions or rules designed to perform a specific task or solve a particular problem.</p>
@@ -111,7 +111,7 @@ const Article4 = () => {
                 <p>Introductory courses in computer science, such as those offered by online platforms like Coursera, edX, and Khan Academy, can provide a strong foundation in algorithms and data structures.</p>
                 <pre><code>Example code block</code></pre>
                 <p>Practicing coding problems on websites like LeetCode, HackerRank, and CodeSignal can help reinforce your understanding and improve your problem-solving skills.</p>
-            </article>
+            </post>
         
             <div className="share-buttons w3-padding-16">
                     <button className="share-button btn btn-black shadow px-2 btn-sm" onClick={handleShare}>share  <FaShare style={{fontSize:'1rem'}}/></button>
@@ -122,4 +122,4 @@ const Article4 = () => {
     );
 }
 
-export default Article4;
+export default Post4;

@@ -1,29 +1,28 @@
 import React from 'react';
-import Algo from "../../../assets/images/Algos.jpeg";
+import Algo from "../../assets/images/Algos.jpeg";
 import { FaShare } from "react-icons/fa6";
 import { MdOutlineAddLink } from "react-icons/md";
-import Post2Table from './PostComponents/Post2Table';
 const post2 = () => {
 
-    const articleTitle = "Getting Started with Data Analytics: Five Key Focus Areas";
-    const articleURL = window.location.href;
-    const articleImage = Algo;
+    const postTitle = "Getting Started with Data Analytics: Five Key Focus Areas";
+    const postURL = window.location.href;
+    const postImage = Algo;
 
     const handleShare = () => {
         if (navigator.share) {
             navigator.share({
-                title: articleTitle,
-                text: 'Check out this article on data analytics!',
-                url: articleURL,
+                title: postTitle,
+                text: 'Check out this post on data analytics!',
+                url: postURL,
                 files: [
-                    new File([articleImage], "analytics.jpg", {
+                    new File([postImage], "analytics.jpg", {
                         type: "image/jpeg",
                     })
                 ]
             }).then(() => {
                 console.log('Thanks for sharing!');
             }).catch((error) => {
-                console.error('Something went wrong sharing the article:', error);
+                console.error('Something went wrong sharing the post:', error);
             });
         } else {
             alert('Sharing is not supported on this browser.');
@@ -31,7 +30,7 @@ const post2 = () => {
     };
 
     const handleCopyLink = () => {
-        navigator.clipboard.writeText(articleURL).then(() => {
+        navigator.clipboard.writeText(postURL).then(() => {
             alert('Link copied to clipboard!');
         }).catch((error) => {
             console.error('Could not copy text:', error);
@@ -68,11 +67,11 @@ const post2 = () => {
                 `}
             </style>
  
-            <article className="blog-post text-black">
+            <post className="blog-post text-black">
                 <div className="container">
                 <img src={Algo} alt="Analytics" className='w-100 shadow-lg rounded' />
                 <h2 className="display-4 link-body-emphasis my-4">
-                    <b>{articleTitle}</b></h2>
+                    <b>{postTitle}</b></h2>
                 <p className="blog-post-meta">August 8, 2024 by <a href="/blog">author</a></p>
 
                 <p>Discover the five essential categories of data analytics that every website owner should understand. Learn what each category reveals about your site and how to leverage these insights to drive better performance and decision-making.</p>
@@ -85,7 +84,7 @@ const post2 = () => {
                 <p>Understanding the different categories of data analytics can help you gain a comprehensive view of your website’s performance and identify areas for improvement.</p>
                 </div>
            
-           <Post2Table />
+    
            <div className="container mt-5">
             <hr />
             <div className="share-buttons w3-padding-16">
@@ -94,7 +93,7 @@ const post2 = () => {
               </div>
               </div>
             
-            </article>
+            </post>
         </div>
     );
 }

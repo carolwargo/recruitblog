@@ -3,16 +3,19 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 
 
-import Post1 from './components/Posts/Post1.jsx'
+import Post1 from "./components/Posts/Post1.jsx";
 import Post2 from "./components/Posts/Post2.jsx";
 import Post3 from "./components/Posts/Post3.jsx";
 import Post4 from "./components/Posts/Post4.jsx";
 import Post5 from "./components/Posts/Post5.jsx";
 import Post6 from "./components/Posts/Post6.jsx";
-import PostsLayout from "./components/layouts/PostsLayout.jsx";
-import PostsIndex from "./PostsIndex.jsx";
+import PostsIndex from './components/PostsIndex.jsx';
 import HomePage from "./pages/HomePage.jsx";
+import PostsLayout from "./components/Layouts/PostsLayout.jsx";  
 import ErrorBoundary from "./components/ErrorBoundary.jsx";
+//import TopNav from "./components/Navs/TopNav.jsx";
+//import Footer from "./components/Footer.jsx";
+//import DMHeader from "./components/Headers/DMHeader.jsx";
 
 function App() {
   // Posts data
@@ -27,10 +30,10 @@ function App() {
 
   return (
     <div className="App">
-      <BrowserRouter basename="carolwargoblog">
+      <BrowserRouter>
         <ErrorBoundary>
           <Routes>
-            <Route path="/" element={<HomePage />} />
+            <Route path="/" element={<HomePage posts={posts}/> } />
             <Route path="/posts" element={<PostsIndex posts={posts} />} />
             <Route path="/posts/*" element={<PostsLayout />}>
               {posts.map((post) => (

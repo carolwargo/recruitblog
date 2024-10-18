@@ -1,9 +1,10 @@
+//Overview of all posts
 import React from "react";
 import { Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Card, Button } from "react-bootstrap"; // Import Card and Button from React Bootstrap
 
-const PostsIndexPage = ({ posts }) => {
+const PostsIndex = ({ posts }) => {
   return (
     <div className="container mt-4">
       <div className="row">
@@ -28,4 +29,4 @@ const PostsIndexPage = ({ posts }) => {
   );
 };
 
-export default PostsIndexPage;
+export default PostsIndex;

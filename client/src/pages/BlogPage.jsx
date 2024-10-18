@@ -2,7 +2,7 @@ import React from 'react';
 import PostsIndexPage from '../components/PostsIndex';
 
 
-const HomePage = () => {
+const BlogPage = () => {
     return (
         <div>
             <h1>Blog</h1>
@@ -20,4 +20,4 @@ const HomePage = () => {
     );
 };
 
-export default HomePage;
+export default BlogPage;
