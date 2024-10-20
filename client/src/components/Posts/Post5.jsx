@@ -1,76 +1,60 @@
 import React from 'react';
 import Algo from "../../assets/images/Algos.jpeg";
-import { FaShare } from "react-icons/fa6";
-import { MdOutlineAddLink } from "react-icons/md";
+import { Link } from 'react-router-dom';
 
-const Article5 = () => {
-  const articleTitle = "Social Media Martketing Behaviors";
-  const articleURL = window.location.href;
-  const articleImage = Algo;
-
-  const handleShare = () => {
-      if (navigator.share) {
-          navigator.share({
-              title: articleTitle,
-              text: 'Check out this article!',
-              url: articleURL,
-              files: [
-                  new File([articleImage], "analytics.jpg", {
-                      type: "image/jpeg",
-                  })
-              ]
-          }).then(() => {
-              console.log('Thanks for sharing!');
-          }).catch((error) => {
-              console.error('Something went wrong sharing the article:', error);
-          });
-      } else {
-          alert('Sharing is not supported on this browser.');
-      }
-  };
+const Post5 = () => {
+  const postTitle = "Social Media Marketing Behaviors";
+  const postURL = window.location.href;
 
   const handleCopyLink = () => {
-      navigator.clipboard.writeText(articleURL).then(() => {
-          alert('Link copied to clipboard!');
-      }).catch((error) => {
-          console.error('Could not copy text:', error);
+    navigator.clipboard.writeText(postURL)
+      .then(() => {
+        alert('Link copied to clipboard!');
+      })
+      .catch((error) => {
+        console.error('Could not copy text:', error);
       });
   };
 
-    return (
-        <div className='article5' id='article5'>
-            {/**UNDERSTANDING ALGORITHMS */}
-            <style>
-                {`
-                .blog-post p {
-                    font-size: 13px;
-                }
-                .share-buttons {
-                    display: flex;
-                    gap: 10px;
-                    margin-top: 20px;
-                }
-                .share-buttons button {
-                    padding: 10px 20px;
-                    font-size: 14px;
-                    border: none;
-                    border-radius: 5px;
-                    cursor: pointer;
-                }
-                .share-button {
-                    background-color: #007bff;
-                    color: white;
-                }
-                .copy-link-button {
-                    background-color: #28a745;
-                    color: white;
-                }
-                `}
-            </style>
-    
+  return (
+    <div className='post5' id='post5'>
+      <style>
+        {`
+        .blog-post p {
+          font-size: 13px;
+        }
+        .share-buttons {
+          display: flex;
+          gap: 10px;
+          margin-top: 20px;
+        }
+        .share-buttons button {
+          padding: 10px 20px;
+          font-size: 14px;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+        }
+        .share-button {
+          background-color: #007bff;
+          color: white;
+        }
+        .copy-link-button {
+          background-color: #28a745;
+          color: white;
+        }
+        `}
+      </style>
+
+      <div className="w3-container w3-padding-48 mt-4">
+        <div className="w3-row-padding">
+          <div className="row"> {/* Bootstrap Row Wrapper */}
+            
+            {/* Main Content Column */}
+            <div className="col-sm-12 col-md-9 col-lg-9 w3-padding">
             <article className="blog-post text-black">
                 <img src={Algo} alt="algorithm" className='w-100 shadow-lg rounded' />
-                <h2 className="display-4 link-body-emphasis my-4"><b>{articleTitle}</b></h2>
+                <h2 className="display-4 link-body-emphasis my-4"><b>{postTitle}</b></h2>
                 <p className="blog-post-meta">August 8, 2024 by <a href="/blog">author</a></p>
                 <p>Social media algorithms determine what content users see on platforms like Facebook, Instagram, Twitter, and TikTok. These algorithms are designed to enhance user engagement by showing relevant and interesting content.</p>
                 <hr/>
@@ -113,15 +97,75 @@ const Article5 = () => {
                 <p>Many social media platforms provide insights and tips on their blogs and help centers. Following industry experts and staying updated with platform changes can also provide valuable information.</p>
                 <pre><code>Example code block</code></pre>
                 <p>Experimenting with different types of content and analyzing engagement metrics can help you understand what works best for your audience.</p>
-            </article>
-         
-            <div className="share-buttons w3-padding-16">
-                    <button className="share-button btn btn-black shadow px-2 btn-sm" onClick={handleShare}>share  <FaShare style={{fontSize:'1rem'}}/></button>
-                    <button className="copy-link-button btn btn-black shadow px-2 btn-sm mx-1" onClick={handleCopyLink}> copy <MdOutlineAddLink  style={{fontSize:'1rem'}}/></button>
+           
+                <hr />
+              <div className="share-buttons w3-padding-16">
+             
+                <button className=" btn-black-outline py-1 px-2 fw-bolder"  
+                style={{fontSize:'1rem'}} 
+                onClick={handleCopyLink}>
+                 share button
+                </button>
               </div>
-              <hr/>
-      </div>
-    );
-}
+         
+            </article>
+         </div>
 
-export default Article5;
+         {/* Sidebar Column */}
+         <div className="col-sm-12 col-md-3 col-lg-3">
+            <div className="card my-2 rounded">
+                <img src={Algo} alt='algo' className="w-100 rounded-top"></img>
+             
+                <div className="card-body">
+                  <h5 className="card-title">Related Posts</h5>
+               
+                 <div className="card-text fade-out">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam sequi repudiandae, dolorem aut vero! </div>
+                    <div className='mt-2'>
+                    <Link to={`/post/post2`}>
+                 <button className='mt-2 py-1 px-3 btn btn-dark btn-sm'>read post</button>
+                 </Link> 
+                 </div>
+               </div>
+              </div>
+              <div className="card my-2 rounded">
+                <img src={Algo} alt='algo' className="w-100 rounded-top"></img>
+             
+                <div className="card-body">
+                  <h5 className="card-title">Related Posts</h5>
+               
+                 <div className="card-text fade-out">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam sequi repudiandae, dolorem aut vero! </div>
+                    <div className='mt-2'>
+                    <Link to={`/post/post2`}>
+                 <button className='mt-2 py-1 px-3 btn btn-dark btn-sm'>read post</button>
+                 </Link> 
+                 </div>
+               </div>
+              </div>
+
+              <div className="card my-2 rounded">
+                <img src={Algo} alt='algo' className="w-100 rounded-top"></img>
+             
+                <div className="card-body">
+                  <h5 className="card-title">Related Posts</h5>
+               
+                 <div className="card-text fade-out">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam sequi repudiandae, dolorem aut vero! </div>
+                    <div className='mt-2'>
+                    <Link to={`/post/post2`}>
+                 <button className='mt-2 py-1 px-3 btn btn-dark btn-sm'>read post</button>
+                 </Link> 
+                 </div>
+               </div>
+              </div>
+            </div>
+       
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Post5;

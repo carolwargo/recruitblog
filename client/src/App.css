@@ -1,1 +1,7 @@
 @import '@fortawesome/fontawesome-free/css/all.min.css';
+.fade-out {
+  display: inline-block;
+  /* Use mask-image to fade the text out towards the end */
+  mask-image: linear-gradient(to right, black 80%, transparent 90%);
+  -webkit-mask-image: linear-gradient(to right, black 80%, transparent 100%);
+}

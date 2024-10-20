@@ -13,12 +13,15 @@ import PostsIndex from './components/PostsIndex.jsx';
 import HomePage from "./pages/HomePage.jsx";
 import PostsLayout from "./components/Layouts/PostsLayout.jsx";  
 import ErrorBoundary from "./components/ErrorBoundary.jsx";
-//import TopNav from "./components/Navs/TopNav.jsx";
-//import Footer from "./components/Footer.jsx";
-//import DMHeader from "./components/Headers/DMHeader.jsx";
+import SinglePostLayout from "./components/Layouts/SinglePostLayout.jsx";
+import PostIndex from "./components/PostIndex.jsx";
+import ResourceBook from "./pages/ResourceBook.jsx";
 
 function App() {
-  // Posts data
+
+
+  // WHOLE Posts data
+  
   const posts = [
     { id: 1, title: "Post 1", component: Post1 },
     { id: 2, title: "Post 2", component: Post2 },
@@ -33,13 +36,21 @@ function App() {
       <BrowserRouter>
         <ErrorBoundary>
           <Routes>
-            <Route path="/" element={<HomePage posts={posts}/> } />
-            <Route path="/posts" element={<PostsIndex posts={posts} />} />
-            <Route path="/posts/*" element={<PostsLayout />}>
-              {posts.map((post) => (
-                <Route key={post.id} path={`post${post.id}`} element={<post.component />} />
-              ))}
-            </Route>
+            <Route path="/" element={<HomePage /> } />
+            <Route path="/resourcebook" element={<ResourceBook />} />
+            <Route path="/posts" element={<PostsIndex  />} />
+<Route path="/posts/*" element={<PostsLayout />}>
+          {posts.map((post) => (
+            <Route key={post.id} path={`post${post.id}`} element={<post.component />} />
+          ))}
+        </Route>
+        <Route path="/post" element={<PostIndex  />} />
+        <Route path="/post/*" element={<SinglePostLayout />}>
+          {posts.map((posts) => (
+            <Route key={posts.id} path={`post${posts.id}`} element={<posts.component />} />
+          ))}
+        </Route>
+
             <Route path="*" element={<NotFound />} />
           </Routes>
         </ErrorBoundary>
