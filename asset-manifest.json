@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/recruitblog/static/css/main.8b0381f9.css",
+    "main.js": "/recruitblog/static/js/main.8c1f0db5.js",
+    "static/js/453.419a5d54.chunk.js": "/recruitblog/static/js/453.419a5d54.chunk.js",
+    "static/media/Algos.jpeg": "/recruitblog/static/media/Algos.c74e1226bebfe36ad5ef.jpeg",
+    "static/media/fa-solid-900.ttf": "/recruitblog/static/media/fa-solid-900.07ed6d5fa32c1d54af0f.ttf",
+    "static/media/fa-brands-400.ttf": "/recruitblog/static/media/fa-brands-400.0ff70dcbf135d859ebf3.ttf",
+    "static/media/fa-solid-900.woff2": "/recruitblog/static/media/fa-solid-900.93f719f4d62bfa3e748c.woff2",
+    "static/media/fa-brands-400.woff2": "/recruitblog/static/media/fa-brands-400.bb8d5a145e22822103fb.woff2",
+    "static/media/NCAAHQweb.webp": "/recruitblog/static/media/NCAAHQweb.1ab6b9ed44cb7965b022.webp",
+    "static/media/fa-regular-400.ttf": "/recruitblog/static/media/fa-regular-400.17a6e1aebccdbaa39e78.ttf",
+    "static/media/fa-regular-400.woff2": "/recruitblog/static/media/fa-regular-400.bc3722686635b5f86132.woff2",
+    "static/media/fa-v4compatibility.ttf": "/recruitblog/static/media/fa-v4compatibility.0f6cb412603527bda691.ttf",
+    "static/media/fa-v4compatibility.woff2": "/recruitblog/static/media/fa-v4compatibility.6cfec8414be20e2c3426.woff2",
+    "index.html": "/recruitblog/index.html",
+    "main.8b0381f9.css.map": "/recruitblog/static/css/main.8b0381f9.css.map",
+    "main.8c1f0db5.js.map": "/recruitblog/static/js/main.8c1f0db5.js.map",
+    "453.419a5d54.chunk.js.map": "/recruitblog/static/js/453.419a5d54.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8b0381f9.css",
+    "static/js/main.8c1f0db5.js"
+  ]
+}
