@@ -1,5 +1,6 @@
 import React from 'react';
 import Algo from "../../assets/images/Algos.jpeg";
+import NCAAHQweb from "../../assets/images/Posts/NCAAHQweb.webp";
 import { Link } from 'react-router-dom';
 
 const Post4 = () => {
@@ -47,6 +48,7 @@ const Post4 = () => {
       </style>
 
       <div className="w3-container w3-padding-48 mt-4">
+      <p>post 4</p>
         <div className="w3-row-padding">
           <div className="row"> {/* Bootstrap Row Wrapper */}
             
@@ -122,14 +124,15 @@ const Post4 = () => {
                  <div className="card-text fade-out">
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam sequi repudiandae, dolorem aut vero! </div>
                     <div className='mt-2'>
-                    <Link to={`/post/post2`}>
+                    <Link to={`/post/post5`}>
                  <button className='mt-2 py-1 px-3 btn btn-dark btn-sm'>read post</button>
                  </Link> 
                  </div>
                </div>
               </div>
-              <div className="card my-2 rounded">
-                <img src={Algo} alt='algo' className="w-100 rounded-top"></img>
+            {/**NCAA POST */}
+            <div className="card my-2 rounded">
+                <img src={NCAAHQweb} alt="NCAA headquarters" className="w-100 rounded-top"></img>
              
                 <div className="card-body">
                   <h5 className="card-title">Related Posts</h5>
@@ -137,7 +140,7 @@ const Post4 = () => {
                  <div className="card-text fade-out">
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam sequi repudiandae, dolorem aut vero! </div>
                     <div className='mt-2'>
-                    <Link to={`/post/post2`}>
+                    <Link to={`/posts/post1`}>
                  <button className='mt-2 py-1 px-3 btn btn-dark btn-sm'>read post</button>
                  </Link> 
                  </div>
@@ -153,7 +156,7 @@ const Post4 = () => {
                  <div className="card-text fade-out">
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam sequi repudiandae, dolorem aut vero! </div>
                     <div className='mt-2'>
-                    <Link to={`/post/post2`}>
+                    <Link to={`/post/post5`}>
                  <button className='mt-2 py-1 px-3 btn btn-dark btn-sm'>read post</button>
                  </Link> 
                  </div>

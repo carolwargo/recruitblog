@@ -47,6 +47,7 @@ const Post5 = () => {
       </style>
 
       <div className="w3-container w3-padding-48 mt-4">
+      <p>post 5</p>
         <div className="w3-row-padding">
           <div className="row"> {/* Bootstrap Row Wrapper */}
             
@@ -122,7 +123,7 @@ const Post5 = () => {
                  <div className="card-text fade-out">
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam sequi repudiandae, dolorem aut vero! </div>
                     <div className='mt-2'>
-                    <Link to={`/post/post2`}>
+                    <Link to={`/post/post6`}>
                  <button className='mt-2 py-1 px-3 btn btn-dark btn-sm'>read post</button>
                  </Link> 
                  </div>
@@ -137,7 +138,7 @@ const Post5 = () => {
                  <div className="card-text fade-out">
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam sequi repudiandae, dolorem aut vero! </div>
                     <div className='mt-2'>
-                    <Link to={`/post/post2`}>
+                    <Link to={`/post/post6`}>
                  <button className='mt-2 py-1 px-3 btn btn-dark btn-sm'>read post</button>
                  </Link> 
                  </div>
@@ -153,7 +154,7 @@ const Post5 = () => {
                  <div className="card-text fade-out">
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam sequi repudiandae, dolorem aut vero! </div>
                     <div className='mt-2'>
-                    <Link to={`/post/post2`}>
+                    <Link to={`/post/post6`}>
                  <button className='mt-2 py-1 px-3 btn btn-dark btn-sm'>read post</button>
                  </Link> 
                  </div>

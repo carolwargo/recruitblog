@@ -2,6 +2,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
 import Algo from "../../assets/images/Algos.jpeg";
+import NCAAHQweb from "../../assets/images/Posts/NCAAHQweb.webp";
 import { Link } from 'react-router-dom';
 
 const Post1 = () => {
@@ -49,15 +50,16 @@ const Post1 = () => {
       </style>
 
       <div className="w3-container w3-padding-48 mt-4">
+       <p>post 1</p>
         <div className="w3-row-padding">
           <div className="row"> {/* Bootstrap Row Wrapper */}
             
             {/* Main Content Column */}
             <div className="col-sm-12 col-md-9 col-lg-9 w3-padding">
             <article className="blog-post text-black">
-                <img src={Algo} alt="algorithm" className='w-100 shadow-lg rounded' />
+                <img src={NCAAHQweb} alt="NCAA headquarters" className='w-100 shadow-lg rounded' />
                 <h2 className="display-4 link-body-emphasis my-4"><b>{postTitle}</b></h2>
-                <p className="blog-post-meta">August 8, 2024 by <a href="/blog">author</a></p>
+                <p className="blog-post-meta">November 8, 2024 by <a href="/blog">Staff Writer</a></p>
                 <p>Social media algorithms determine what content users see on platforms like Facebook, Instagram, Twitter, and TikTok. These algorithms are designed to enhance user engagement by showing relevant and interesting content.</p>
                 <hr/>
                 <p>These algorithms are complex and constantly evolving, incorporating various factors to personalize each user's feed. Understanding how they work can help users and content creators optimize their social media strategies.</p>
@@ -119,14 +121,16 @@ const Post1 = () => {
                 <img src={Algo} alt='algo' className="w-100 rounded-top"></img>
              
                 <div className="card-body">
-                  <h5 className="card-title">Related Posts</h5>
+                  <h5 className="card-title">Related Posts Post 2</h5>
                
                  <div className="card-text fade-out">
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam sequi repudiandae, dolorem aut vero! </div>
                     <div className='mt-2'>
-                    <Link to={`/post/post2`}>
-                 <button className='mt-2 py-1 px-3 btn btn-dark btn-sm'>read post</button>
-                 </Link> 
+                    <Link to={`/posts/post2`}>
+    <button className='mt-2 py-1 px-3 btn btn-dark btn-sm'>read post</button>
+</Link>
+
+         
                  </div>
                </div>
               </div>
@@ -139,7 +143,7 @@ const Post1 = () => {
                  <div className="card-text fade-out">
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam sequi repudiandae, dolorem aut vero! </div>
                     <div className='mt-2'>
-                    <Link to={`/post/post2`}>
+                    <Link to={`/posts/post2`}>
                  <button className='mt-2 py-1 px-3 btn btn-dark btn-sm'>read post</button>
                  </Link> 
                  </div>
@@ -155,7 +159,7 @@ const Post1 = () => {
                  <div className="card-text fade-out">
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam sequi repudiandae, dolorem aut vero! </div>
                     <div className='mt-2'>
-                    <Link to={`/post/post2`}>
+                    <Link to={`/posts/post2`}>
                  <button className='mt-2 py-1 px-3 btn btn-dark btn-sm'>read post</button>
                  </Link> 
                  </div>

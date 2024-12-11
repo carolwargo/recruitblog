@@ -4,13 +4,14 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Card, Button } from "react-bootstrap"; // Import Card and Button from React Bootstrap
-import Algos from "../assets/images/Algos.jpeg"; // Import image for Post 1
+import NCAAHQweb from "../assets/images/Posts/NCAAHQweb.webp"; // Import image for Post 1
+import Algos from "../assets/images/Algos.jpeg"; // Import image for Post 2
 
 const posts = [
   { 
       id: 1, 
-      title: "Post 1", 
-      imageUrl: Algos,
+      title: "What to Know About the NCAA", 
+      imageUrl: NCAAHQweb,
       summary: "This is a summary for Post 1." 
   },
   { 
@@ -51,14 +52,15 @@ const PostsIndex = () => {
       <div className="row">
         {posts.map((post) => (
           <div key={post.id} className="col-sm-12 col-md-4 col-lg-4 mb-4"> {/* Adjusts to show 3 cards per row */}
-            <Card  className="g-2">
+            <Card className="g-2">
               <Card.Img variant="top" src={post.imageUrl || "holder.js/100px180"} /> {/* Use post image or fallback */}
               <Card.Body>
                 <Card.Title>{post.title}</Card.Title>
                 <Card.Text>
                   {post.summary || "Some quick example text to build on the card title and make up the bulk of the card's content."}
                 </Card.Text>
-                <Link to={`/post/post${post.id}`}>
+                {/* Update Link path to match the App.js route */}
+                <Link to={`/posts/post${post.id}`}>
                   <Button variant="primary">Read More</Button>
                 </Link>
               </Card.Body>
