@@ -27,7 +27,7 @@ function App() {
 
   return (
     <div className="App">
-      <BrowserRouter>
+      <BrowserRouter basename="recruitblog">
         <ErrorBoundary>
           <Routes>
             {/* Home Route */}
